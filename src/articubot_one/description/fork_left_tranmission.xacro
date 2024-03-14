@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="fork_left_transmission" params="">
+        <joint name="fork_left_joint">
+        <command_interface name="velocity">
+            <param name="min">0.49</param>
+            <param name="max">0.77</param>
+        </command_interface>
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+        </joint>
+    </xacro:macro>
+</robot>

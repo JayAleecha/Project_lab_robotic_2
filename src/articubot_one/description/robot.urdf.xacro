@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+    
+    <xacro:include filename="robot_core.xacro" />
+    <xacro:include filename="inertial_macros.xacro" />
+    <xacro:include filename="gazebo_control.xacro" />
+    <xacro:include filename="lidar.xacro" />
+    <xacro:include filename="side_slide_transmission.xacro" />
+    <xacro:include filename="front_slide_tranmission.xacro" />
+    <xacro:include filename="fork_left_tranmission.xacro"/>
+    <xacro:include filename="fork_right_tranmission.xacro"/>
+    <xacro:include filename="robot_control.urdf.xacro"/>
+
+    <ros2_control name="gripper_robot_gazebo_system" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <xacro:side_slide_transmission/>
+        <xacro:front_slide_transmission/>
+        <xacro:fork_left_transmission/>
+        <xacro:fork_right_transmission/>
+    </ros2_control>
+    <xacro:robot_controller/>
+</robot>
