@@ -8,3 +8,7 @@ plug-in : gazebo_ros_diff_drive
 <--------- For lidar ------------>
 plug-in : libgazebo_ros_ray_sensor
 ----------------------------------
+
+<--------- For control robot ------------>
+plug-in : gazebo_ros2_control_robot
+------------------------------------------
